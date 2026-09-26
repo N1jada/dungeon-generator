@@ -1,0 +1,14 @@
+name: Idea or feature request
+description: Suggest an improvement, a new piece, or a new kind of dungeon
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What would it be used for on your server?

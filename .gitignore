@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+
+# local test server (Paper jar, world, logs) and generated specs
+.local-server/
+.local-server*/
+specs/generated*.json
+
+# Mojang's game data: never committed (see vendor/README.md)
+vendor/*
+!vendor/README.md
+
+# secrets and local machine files
+.env
+.env.*
+.DS_Store

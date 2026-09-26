@@ -1,0 +1,71 @@
+{
+  "name": "The Drowned Reliquary",
+  "tagline": "What the copper priests buried, the water kept.",
+  "lore_book": {
+    "title": "Reliquary Ledger",
+    "author": "Brother Halm",
+    "pages": [
+      "Day 41. The pumps have failed again. The lower chambers take water faster than we can bail. The Abbot says the Reliquary must not flood; the Heart is down there.",
+      "Day 43. The Warden has stopped answering. It walks the pedestal hall in circles and will not let us near the vault. Something in the copper has gone wrong.",
+      "Day 44. We are sealing the stair. If you read this, the Heart is still below. Take it, and take the Warden with it. Do not trust the quiet rooms."
+    ]
+  },
+  "spawner_contents": {
+    "melee": "husk",
+    "ranged": "stray",
+    "slow_ranged": "stray",
+    "small_melee": "silverfish"
+  },
+  "rooms": [
+    {
+      "room": "room1",
+      "title": "The Bailing Hall",
+      "subtitle": "The pumps fell silent here.",
+      "sign": ["BAILING HALL", "pumps failed", "day 41", "- Halm"],
+      "ambush": [{"entity": "minecraft:drowned", "count": 3, "name": "Bailer"}]
+    },
+    {
+      "room": "room2",
+      "title": "The Assembly",
+      "subtitle": "Where the priests last met.",
+      "sign": ["THE ASSEMBLY", "keep moving", "do not trust", "the quiet"],
+      "ambush": [{"entity": "minecraft:zombie_villager", "count": 2, "name": "Copper Priest"}]
+    },
+    {
+      "room": "boss",
+      "title": "The Reliquary",
+      "subtitle": "The Warden still walks its circle.",
+      "sign": ["RELIQUARY", "the Heart is", "still below", "- sealed"],
+      "ambush": []
+    }
+  ],
+  "boss": {
+    "entity": "minecraft:wither_skeleton",
+    "name": "The Copper Warden",
+    "health": 160,
+    "equipment": [
+      {"slot": "mainhand", "item": "minecraft:mace"},
+      {"slot": "head", "item": "minecraft:golden_helmet"},
+      {"slot": "chest", "item": "minecraft:chainmail_chestplate"}
+    ],
+    "effects": [{"effect": "minecraft:speed", "amplifier": 0}, {"effect": "minecraft:resistance", "amplifier": 0}],
+    "glowing": true,
+    "minions": [{"entity": "minecraft:drowned", "count": 2, "name": "Kept Priest"}],
+    "intro": "It has kept the Heart for forty years. It will not stop now."
+  },
+  "reward": {
+    "rolls": 4,
+    "loot": [
+      {"item": "minecraft:heavy_core", "min": 1, "max": 1, "weight": 3, "name": "The Reliquary Heart"},
+      {"item": "minecraft:diamond", "min": 2, "max": 5, "weight": 6},
+      {"item": "minecraft:golden_apple", "min": 1, "max": 2, "weight": 5},
+      {"item": "minecraft:trial_key", "min": 1, "max": 2, "weight": 6},
+      {"item": "minecraft:emerald", "min": 3, "max": 8, "weight": 6},
+      {"item": "minecraft:enchanted_book", "min": 1, "max": 1, "weight": 2},
+      {"item": "minecraft:copper_block", "min": 4, "max": 12, "weight": 4}
+    ],
+    "message": "The Warden falls, and the water goes still."
+  },
+  "victory_title": "The Heart is Yours",
+  "victory_subtitle": "Brother Halm can rest."
+}

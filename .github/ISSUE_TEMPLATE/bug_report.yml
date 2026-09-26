@@ -1,0 +1,24 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report! Please **never paste API keys**, panel URLs or RCON passwords.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: The command you ran, and what went wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output or error
+      render: text
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: "commit / Paper build / Java version"
